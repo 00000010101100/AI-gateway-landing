@@ -1,0 +1,61 @@
+import GNB from './components/GNB';
+import Hero from './components/Hero';
+import Problems from './components/Problems';
+import Solution from './components/Solution';
+import Features from './components/Features';
+import Benefits from './components/Benefits';
+import Testimonials from './components/Testimonials';
+import CTABanner from './components/CTABanner';
+import AIInsights from './components/AIInsights';
+import Footer from './components/Footer';
+// Background images removed - using CSS gradients instead
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section with GNB */}
+      <div className="relative w-full">
+        {/* Background Gradient */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
+        />
+        
+        {/* Black Overlay with 30% opacity */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-black"
+          style={{ opacity: 0.3 }}
+        />
+        
+        {/* Content */}
+        <div className="relative">
+          <GNB />
+          <Hero />
+        </div>
+      </div>
+
+      {/* Problems Section */}
+      <Problems />
+
+      {/* Solution Section */}
+      <Solution />
+
+      {/* Features Section */}
+      <Features />
+
+      {/* Benefits Section */}
+      <Benefits />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* CTA Banner Section */}
+      <CTABanner />
+
+      {/* AI Insights Section */}
+      <AIInsights />
+
+      {/* Footer Section */}
+      <Footer />
+    </div>
+  );
+}
