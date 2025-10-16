@@ -1,83 +1,28 @@
-
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden h-[444px] md:h-[444px] lg:h-[554px]">
-      {/* Desktop Background Image */}
+      {/* Background Gradient */}
       <div 
-        className="hidden md:block absolute h-full"
-        style={{
-          left: '-40px',
-          right: '-40px',
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+        className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
       />
       
-      {/* Mobile Background Image */}
-      <div 
-        className="md:hidden absolute h-full"
-        style={{
-          left: '-40px',
-          right: '-40px',
-          backgroundImage: `url(${heroBackgroundMobile})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      
-      {/* Black Overlay with 20% opacity */}
-      <div className="absolute inset-0 w-full h-full bg-black/20" />
-
       {/* Content */}
-      <div className="container-responsive relative mx-auto px-5 md:px-8 lg:px-0 h-[444px] md:h-[444px] lg:h-[554px]">
-        <div className="flex flex-col items-center justify-center text-center h-full">
-          {/* Main Heading */}
-          <h1 
-            className="text-white w-full text-[32px] md:text-[44px]"
-            style={{
-              lineHeight: '1.3',
-              fontWeight: '600',
-              letterSpacing: '-0.02em',
-              marginBottom: '16px'
-            }}
-          >
-            AI API 통합관리 서비스, <br className="md:hidden" />
-            AI 게이트웨이
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <div className="text-center text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            AI Gateway
           </h1>
-
-          {/* Description */}
-          <p 
-            className="w-full text-[16px] md:text-[20px]"
-            style={{
-              lineHeight: '1.5',
-              fontWeight: '400',
-              marginBottom: '36px',
-              color: '#ffffff'
-            }}
-          >
-            AI 게이트웨이는 조직의 AI API 운영을 한 곳에서 안전하고 효율적으로 통합 관리하는 서비스입니다.
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            모든 AI 서비스를 하나의 플랫폼에서 관리하세요
           </p>
-
-          {/* CTA Button */}
-          <div className="flex items-center justify-center">
-            <a
-              href="https://letsur.ai/kr/inquiry"
-              className="text-white border border-[#d3d3d3] hover:border-[#00c781] hover:text-[#00c781] transition-all duration-200"
-              style={{
-                fontSize: '16px',
-                fontWeight: '600',
-                borderRadius: '0px',
-                padding: '14px 40px',
-                backgroundColor: 'rgba(0, 0, 0, 0.5)'
-              }}
-            >
-              도입 문의하기
-            </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-900 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+              시작하기
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+              더 알아보기
+            </button>
           </div>
-
         </div>
       </div>
     </section>
