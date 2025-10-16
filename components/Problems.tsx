@@ -1,11 +1,10 @@
-import { Settings, Box } from 'lucide-react';
-import svgPaths from '../imports/svg-w7sg2erex4';
+import { Settings, Box, DollarSign, FileText } from 'lucide-react';
 
 // Custom Icon Component for API Spec
 function ApiSpecIcon() {
   return (
-    <div className="w-9 h-9 lg:w-12 lg:h-12" style={{ marginLeft: '-8px' }}>
-      <img src={apiSpecIcon} alt="API Spec" className="w-full h-full object-contain" />
+    <div className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center">
+      <FileText className="w-6 h-6 text-blue-600" />
     </div>
   );
 }
@@ -13,8 +12,8 @@ function ApiSpecIcon() {
 // Custom Icon Component for Usage & Cost
 function UsageCostIcon() {
   return (
-    <div className="w-9 h-9 lg:w-12 lg:h-12" style={{ marginLeft: '-8px' }}>
-      <img src={usageCostIcon} alt="Usage Cost" className="w-full h-full object-contain" />
+    <div className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center">
+      <DollarSign className="w-6 h-6 text-green-600" />
     </div>
   );
 }
